@@ -1,9 +1,10 @@
-import Title from "../shared/Title";
-import Header from "../layout/Header";
 import { Grid } from "@mui/material";
-import ChatList from "../specific/ChatList";
-import { chats } from "../../constants/sampleData";
 import { useParams } from "react-router-dom";
+import { chats } from "../../constants/sampleData";
+import Header from "../layout/Header";
+import Title from "../shared/Title";
+import ChatList from "../specific/ChatList";
+import Profile from "../specific/Profile";
 
 const AppLayout = () => (WrappedComponent) => {
   // eslint-disable-next-line react/display-name
@@ -48,7 +49,7 @@ const AppLayout = () => (WrappedComponent) => {
               bgcolor: "rgba(0,0,0,0.85)",
             }}
           >
-            T
+            <Profile />
           </Grid>
         </Grid>
       </>
