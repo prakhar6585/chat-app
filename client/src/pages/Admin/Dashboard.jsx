@@ -57,7 +57,16 @@ const Dashboard = () => {
     <AdminLayout>
       <Container component={"main"}>
         {Appbar}
-        <Stack direction={"row"} spacing={"2rem"} flexWrap={"wrap"}>
+        <Stack
+          direction={{
+            xs: "column",
+            lg: "row",
+          }}
+          flexWrap={"wrap"}
+          justifyContent={"center"}
+          alignItems={{ xs: "center", lg: "stretch" }}
+          sx={{ gap: "2rem" }}
+        >
           <Paper
             elevation={3}
             sx={{

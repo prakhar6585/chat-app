@@ -79,6 +79,7 @@ export const doughnutChartOptions = {
       display: false,
     },
   },
+  cutout: 90,
 };
 
 export const DoughnutChart = ({ value = [], labels = [] }) => {
@@ -88,13 +89,19 @@ export const DoughnutChart = ({ value = [], labels = [] }) => {
       {
         data: value,
         label: "Total Chats Vs Group Chats",
-
         backgroundColor: [lightPurple, orange],
         borderColor: [purple, orange],
+        offset: 10,
       },
     ],
   };
-  return <Doughnut data={data} options={doughnutChartOptions} />;
+  return (
+    <Doughnut
+      style={{ zIndex: 10 }}
+      data={data}
+      options={doughnutChartOptions}
+    />
+  );
 };
 
 export default { DoughnutChart };
